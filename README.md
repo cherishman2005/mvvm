@@ -1,4 +1,4 @@
-# VUE-MVVM
+# VUE-MVVM原理分析
 
 VUE双向绑定原理
 

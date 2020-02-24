@@ -170,8 +170,14 @@
                 sub.update();
             });
             */
+            
+            /*
             for (let sub of this.subs) {
                 sub.update();
+            }
+            */
+            for (let i = 0, l = this.subs.length; i < l; i++) {
+                this.subs[i].update();
             }
         }
     };
