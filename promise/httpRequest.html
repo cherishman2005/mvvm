@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>http test</title>
+</head>
+<body class="alt apidoc">
+<h1>vue test</h1>
+
+<div id="app">
+
+</div> 
+
+</body>
+<script type='text/javascript'>
+
+function reqListener () {
+  console.log(this.responseText);
+}
+
+let oReq = new XMLHttpRequest();
+oReq.addEventListener("load", reqListener);
+oReq.open("GET", "https://service-test.sunclouds.com/test");
+oReq.send();
+
+</script>
+</html>
