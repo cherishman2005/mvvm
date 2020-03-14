@@ -43,6 +43,6 @@ declare var d3: D3.Base;
 
 ## Namespaces 与 Modules 的区别
 
-Namespaces 就好比是一个简单的 JS 全局对象。所以他们的区别是很明显。
+Namespaces就好比是一个简单的JS全局对象。所以他们的区别是很明显。
 
-另外现在 Modules 才是推荐的组织代码结构的方式。除非很有必要使用一个命名空间否则不不建议使用。
+另外现在Modules才是推荐的组织代码结构的方式。除非很有必要使用一个命名空间否则不建议使用。
