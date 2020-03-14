@@ -6,13 +6,13 @@
 ### XMLHttpRequest原型调用
 
 ```javascript
-let oReq = new XMLHttpRequest();
-oReq.addEventListener("load", () => {
-  console.log(oReq.responseText);
+let xhr = new XMLHttpRequest();
+xhr.addEventListener("load", () => {
+  console.log(xhr.responseText);
 });
 
-oReq.open("GET", "https://service-test.sunclouds.com/test");
-oReq.send();
+xhr.open("GET", "https://service-test.sunclouds.com/test");
+xhr.send();
 ```
 
 ### XMLHttpRequest promise封装
@@ -20,13 +20,13 @@ oReq.send();
 ```javascript
 function httpRequest(method, url, data) {
   return new Promise((resolve, reject) => {
-    let oReq = new XMLHttpRequest();
-    oReq.addEventListener("load", () => {
-      resolve(oReq.responseText);
+    let xhr = new XMLHttpRequest();
+    xhr.addEventListener("load", () => {
+      resolve(xhr.responseText);
     });
 
-    oReq.open(method, url);
-    oReq.send();
+    xhr.open(method, url);
+    xhr.send();
   });
 }
 
@@ -35,4 +35,5 @@ httpRequest("GET", "https://service-test.sunclouds.com/test").then(res => {
 }).catch(e => {
   console.error("err=", e);
 })
+
 ```
