@@ -14,12 +14,11 @@
 </body>
 <script type='text/javascript'>
 
-function reqListener () {
-  console.log(this.responseText);
-}
-
 let oReq = new XMLHttpRequest();
-oReq.addEventListener("load", reqListener);
+oReq.addEventListener("load", () => {
+  console.log(oReq.responseText);
+});
+
 oReq.open("GET", "https://service-test.sunclouds.com/test");
 oReq.send();
 
