@@ -31,7 +31,7 @@ compile
 
 （2）子组件通过事件触发$emit通知父组件；父组件进而接收对应的参数。—— 典型的订阅发布模式。
 
-![props down , events up](/img/parent-child.png)
+![父子组件的传值原理图](/img/parent-child.png)
 
 通过"props down , events up"我们就简单的实现了父子组件之间的双向传值。
 
