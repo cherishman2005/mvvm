@@ -31,3 +31,31 @@ class User {
 
  console.log(user.fullName);
 ```
+
+## hash算法
+
+DJB Hash
+
+```C
+unsigned int DJBHash(char *str)    
+{    
+    unsigned int hash = 5381;    
+     
+    while (*str){    
+        hash = ((hash << 5) + hash) + (*str++); /* times 33 */    
+    }    
+    hash &= ~(1 << 31); /* strip the highest bit */    
+    return hash;    
+}    
+```
+
+```typescript
+  function hash(str) {
+    var hash = 5381;
+    var i = str.length;
+    while(i) {
+      hash = (hash * 33) ^ str.charCodeAt(--i);
+    }
+    return hash >>> 0
+  }
+```
