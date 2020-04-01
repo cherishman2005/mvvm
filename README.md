@@ -35,6 +35,31 @@ compile
 
 通过"props down , events up"我们就简单的实现了父子组件之间的双向传值。
 
+
+### 单向数据流
+
+props 是单向绑定的：当父组件的属性变化时，将传导给子组件，但是不会反过来。这是为了防止子组件无意修改父组件的状态。
+
+
+## VUEX
+
+全局状态管理
+
+	state
+	getters
+	mutations
+	modules
+	actions
+
+
+## VUE源码解读
+
+VUE是优秀的前端开源框架，让我们尽量不用操作dom，直接写data驱动逻辑，降低初级阶段的开发难度。
+
+vue.js也是非常优秀的js-sdk，值得借鉴和学习。
+
+（1）vue源码中EventEmitter订阅发布设计模式代码写得不错。接口on/emit/once/off函数，prototype组织封装。
+
 ## FAQ 
 
 ### watch与compute区别
