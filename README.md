@@ -14,9 +14,13 @@ Object.defineProperty()
 set/get拦截
 
 Observer
+
 Dep
+
 Watch
+
 compile
+
 
 ## VUE生命周期
 
