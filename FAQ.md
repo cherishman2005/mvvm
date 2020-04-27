@@ -32,6 +32,7 @@ class User {
  console.log(user.fullName);
 ```
 
+
 ## Const和readonly的区别
 const和readonly的值一旦初始化不再刻意改变；
 	（1）const只能在声明时初始化，readonly既可以在声明时初始化也可以在构造器中初始化；
