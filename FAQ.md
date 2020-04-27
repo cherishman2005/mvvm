@@ -32,6 +32,16 @@ class User {
  console.log(user.fullName);
 ```
 
+## Const和readonly的区别
+
+const和readonly的值一旦初始化不再刻意改变；
+	（1）const只能在声明时初始化，readonly既可以在声明时初始化也可以在构造器中初始化；
+	（2）const隐含static不可再写static const；
+	（3）readonly则不默认static如需要可以写static readonly
+	（4）const即开以用来修饰类中的成员，也可以修饰函数体内的局部变量；
+	（5）readonly只可以用于修饰类中的成员；
+
+
 ## hash算法
 
 DJB Hash
@@ -96,3 +106,4 @@ $(".test").hide()
 $("#test").hide()
 
 演示 jQuery 的 hide() 函数，隐藏 id="test" 的元素。
+
