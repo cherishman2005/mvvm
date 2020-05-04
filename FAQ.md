@@ -34,7 +34,9 @@ class User {
 
 
 ## Const和readonly的区别
+
 const和readonly的值一旦初始化不再刻意改变；
+
 	（1）const只能在声明时初始化，readonly既可以在声明时初始化也可以在构造器中初始化；
 	（2）const隐含static，不可再写static const；
 	（3）readonly则不默认static，如需要可以写static readonly；
