@@ -85,7 +85,7 @@
                 //读取表格数据
                 readMasterUser() {
                     //根据实际情况，自己改下啊 
-                    app.key_value.data.map(i => {
+                    this.key_value.data.map(i => {
                         i.id = generateId.get();//模拟后台插入成功后有了id
                         i.isSet=false;//给后台返回数据添加`isSet`标识
                         return i;
@@ -93,43 +93,43 @@
                 },
                 //添加账号
                 addMasterUser() {
-                    for (let i of app.key_value.data) {
-                        if (i.isSet) return app.$message.warning("请先保存当前编辑项");
+                    for (let i of this.key_value.data) {
+                        if (i.isSet) return this.$message.warning("请先保存当前编辑项");
                     }
                     let j = { id: 0, "key": "", "value": "", "isSet": true, "_temporary": true };
-                    app.key_value.data.push(j);
-                    app.key_value.sel = JSON.parse(JSON.stringify(j));
+                    this.key_value.data.push(j);
+                    this.key_value.sel = JSON.parse(JSON.stringify(j));
                 },
                 //修改
                 pwdChange(row, index, cg) {
                     //点击修改 判断是否已经保存所有操作
-                    for (let i of app.key_value.data) {
+                    for (let i of this.key_value.data) {
                         if (i.isSet && i.id != row.id) {
-                            app.$message.warning("请先保存当前编辑项");
+                            this.$message.warning("请先保存当前编辑项");
                             return false;
                         }
                     }
                     //是否是取消操作
                     if (!cg) {
-                        if (!app.key_value.sel.id) app.key_value.data.splice(index, 1);
+                        if (!this.key_value.sel.id) this.key_value.data.splice(index, 1);
                         return row.isSet = !row.isSet;
                     }
                     //提交数据
                     if (row.isSet) {
                         //项目是模拟请求操作  自己修改下
-                        (function () {
-                            let data = JSON.parse(JSON.stringify(app.key_value.sel));
+                        (() => {
+                            let data = JSON.parse(JSON.stringify(this.key_value.sel));
                             for (let k in data) row[k] = data[k];
-                            app.$message({
+                            this.$message({
                                 type: 'success',
                                 message: "保存成功!"
                             });
                             //然后这边重新读取表格数据
-                            app.readMasterUser();
+                            this.readMasterUser();
                             row.isSet = false;
                         })();
                     } else {
-                        app.key_value.sel = JSON.parse(JSON.stringify(row));
+                        this.key_value.sel = JSON.parse(JSON.stringify(row));
                         row.isSet = true;
                     }
                 }
