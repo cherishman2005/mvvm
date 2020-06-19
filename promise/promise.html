@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function MyPromise(func) {
+            var self = this;
+            var count = 0;
+            this.cbklist = [];
+            this.then = function (callback) {
+                //将所有.then方法传进来的参数push到数组当中
+                this.cbklist.push(callback);
+                //能实现链式调用的关键
+                return this;
+            }
+            this.success = function () {
+                //使用递归调用自身
+                if (count == self.cbklist.length) return;
+                self.cbklist[count++](self.success);
+
+            }
+            //进来时调用第一个函数
+            func(self.success);
+        }
+
+
+        // 下面是调用的例子
+        function ajaxA(success) {
+            setTimeout(function () {
+                console.log("AAAAAAAAAA");
+                success();
+            }, 3000);
+        }
+
+        function ajaxB(success) {
+            setTimeout(function () {
+                console.log("BBBBBBBBBB");
+                success();
+            }, 2000);
+        }
+
+        function ajaxC(success) {
+            setTimeout(function () {
+                console.log("CCCCCCCCCC");
+                success();
+            }, 6000);
+        }
+
+        function ajaxD() {
+            setTimeout(function () {
+                console.log("DDDDDDDDD");
+            }, 2000);
+        }
+        new MyPromise(ajaxA).then(ajaxB).then(ajaxC).then(ajaxD);
+    </script>
+</body>
+
+</html>
