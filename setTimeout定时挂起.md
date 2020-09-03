@@ -10,7 +10,7 @@ setTimeout 兼容很复杂。还涉及到与 浏览器tab切换的配合。不�
 
 ## 各大厂商的浏览器 setTimeout的行为不一致
 
-PC 上的 Firefox、Chrome 和 Safari 等浏览器，都会自动把未激活页面中的 JavaScript 定时器（setTimeout、setInterval）间隔最小值改为 1 秒以上。
+PC 上的 Firefox、Chrome 和 Safari 等浏览器，都会自动把未激活页面中的 JavaScript 定时器（setTimeout、setInterval）间隔最小值改为 1 秒以上；而移动设备上的浏览器往往会直接冻结未激活页面上的所有定时器。
 
 
 # 移动端app
