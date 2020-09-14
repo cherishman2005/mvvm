@@ -24,7 +24,7 @@ console.log("开始：", d.toLocaleTimeString('en-US', { hour12: false}), startT
 
 setTimeout(function(){
     count++;
-	var date = new Date();
+    var date = new Date();
     var endTime = date.getTime();
     console.log("结束：", date.toLocaleTimeString('en-US', { hour12: false}), endTime);
     console.log("延时：", endTime - startTime);
@@ -121,13 +121,13 @@ getTime 方法的返回值一个数值，表示从1970年1月1日0时0分0秒（
 1. `同步条件`
    为了确保全局时基具有足够的精度，必须要周期性地对每个节点的全局时间节拍进行再同步。
 
-1. 时钟
-   RTC h264时钟频率90000/s。
 
 # 参考链接
 
 * 解决setInterval计时器不准的问题
+
 https://blog.csdn.net/acm765152844/article/details/51298915
 
 * 手机息屏导致 js 定时器时间不准问题及解决方法
+
 https://juejin.im/post/6844903726558232590
