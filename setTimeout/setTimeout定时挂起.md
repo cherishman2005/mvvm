@@ -2,7 +2,10 @@
 # js端定时setTimeout/setInterval
 setTimeout 兼容很复杂。还涉及到与 浏览器tab切换的配合。不是sdk独立可以解决差值。
 
-参见 https://juejin.im/post/6844903726558232590
+参见
+
+* https://juejin.im/post/6844903726558232590
+* https://imququ.com/post/mobile-web-and-js-timer.html
 
 —— 要结合tab（前端UI的范畴）可见，不可见来减去差值 来矫正超时定时。 —— 在sdk层面没法做到定时准确。
 
