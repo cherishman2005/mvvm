@@ -35,12 +35,6 @@ setTimeout(cb, ms)
 
 用其他成熟的定时任务方案。
 
-# Author
-
-zhangbiwu 
-
-2020.10.02
-
 # 参考链接
 
 -[https://cnodejs.org/topic/53fd6d8b7c1e2284784244c8](https://cnodejs.org/topic/53fd6d8b7c1e2284784244c8)
