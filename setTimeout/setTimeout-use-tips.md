@@ -37,7 +37,7 @@ setTimeout(cb, ms)
 
 # 参考链接
 
--[https://cnodejs.org/topic/53fd6d8b7c1e2284784244c8](https://cnodejs.org/topic/53fd6d8b7c1e2284784244c8)
+- [https://cnodejs.org/topic/53fd6d8b7c1e2284784244c8](https://cnodejs.org/topic/53fd6d8b7c1e2284784244c8)
 
 
 关于setTimeout的最大延时上限
