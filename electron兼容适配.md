@@ -60,7 +60,7 @@ sUsrAg.indexOf('Electron')
 【解决方法】在sdk做适配
 ```
 const sUsrAg = navigator.userAgent;
-if (sUsrAg.indexOf('Electron') === -1) {
+if (sUsrAg.indexOf('Electron') !== -1) {
     return;
 }
 ```
