@@ -122,3 +122,6 @@ $("#test").hide()
 
 演示 jQuery 的 hide() 函数，隐藏 id="test" 的元素。
 
+## javascript格式
+
+- [https://tool.oschina.net/codeformat/js](https://tool.oschina.net/codeformat/js)
