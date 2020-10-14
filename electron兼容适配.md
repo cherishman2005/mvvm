@@ -69,6 +69,8 @@ if (sUsrAg.indexOf('Electron') === -1) {
 
 提供给electron使用的老版本直接将js-sdk里面的"this.setScode(50275)"改为"this.setScode(0)"即可。
 
+【注】this.setScode(0)表示关闭metrics上报。
+
 # 参考
 
 - [https://developer.mozilla.org/zh-CN/docs/Web/API/Window/navigator](https://developer.mozilla.org/zh-CN/docs/Web/API/Window/navigator)
