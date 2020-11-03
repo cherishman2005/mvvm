@@ -125,3 +125,10 @@ $("#test").hide()
 ## javascript格式
 
 - [https://tool.oschina.net/codeformat/js](https://tool.oschina.net/codeformat/js)
+
+
+## pause on uncaught exception
+
+chrome有个开启开关：
+
+- [https://stackoverflow.com/questions/32755631/can-i-prevent-that-chrome-v45-pauses-on-promise-rejections](https://stackoverflow.com/questions/32755631/can-i-prevent-that-chrome-v45-pauses-on-promise-rejections)
