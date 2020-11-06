@@ -72,6 +72,17 @@ unsigned int DJBHash(char *str)
   }
 ```
 
+## JavaScript charCodeAt() 方法
+
+charCodeAt() 方法可返回指定位置的字符的Unicode 编码。这个返回值是0 - 65535 之间的整数。
+
+如：
+```
+"a".charCodeAt(0)
+
+97
+```
+
 ## handler处理示例
 
 ```javascript
