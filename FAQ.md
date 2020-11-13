@@ -143,3 +143,22 @@ $("#test").hide()
 chrome有个开启开关：
 
 - [https://stackoverflow.com/questions/32755631/can-i-prevent-that-chrome-v45-pauses-on-promise-rejections](https://stackoverflow.com/questions/32755631/can-i-prevent-that-chrome-v45-pauses-on-promise-rejections)
+
+
+## time33 哈希函数
+
+time33 哈希函数是一个很流行的哈希算法被perl使用并出现在Berkeley DB中，这也是其中一个最好的已知针对string字符串的哈希函数因为其算法非常快而且分布（注：分布好代表不容易冲突）非常好。
+
+```
+function hash(text) {
+    var hash = 5381, index = text.length;
+
+    while (index) {
+        hash = (hash * 33) ^ text.charCodeAt(--index);
+    }
+
+    return hash >>> 0;
+}
+```
+
+- [https://my.oschina.net/jf3096/blog/605783](https://my.oschina.net/jf3096/blog/605783)
