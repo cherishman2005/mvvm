@@ -162,3 +162,7 @@ function hash(text) {
 ```
 
 - [https://my.oschina.net/jf3096/blog/605783](https://my.oschina.net/jf3096/blog/605783)
+
+## SDK与API的关系
+
+SDK相当于开发集成工具环境，API就是数据接口。在SDK环境下调用API数据。
