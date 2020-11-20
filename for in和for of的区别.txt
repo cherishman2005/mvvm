@@ -82,3 +82,29 @@ for(let key of myArray){
 
 复制代码
 for in遍历的是数组的索引（即键名），而for of遍历的是数组元素值。 所以for in更适合遍历对象，不要使用for in遍历数组。
+
+
+
+补充一个可以用for of 同样能实现for in效果的方式
+
+for…of数组索引:有时候开发中是需要数组的索引的，那我们可以使用下面的代码输出数组索引。
+
+let arr=['xzblogs','小智','zachary']
+for (let index of arr.keys()){
+    console.log(index);
+}
+可以看到这时的控制台就输出了0,1,2，也就是数组的索引。
+
+
+
+用for of还可以同时输出对应的索引值和对应的内容，也就是键值对
+我们用entries()这个实例方法，配合我们的for…of循环就可以同时输出内容和索引了。
+let arr=['xzblogs','小智','zachary']
+for (let [index,val] of arr.entries()){
+    console.log(index+':'+val);
+}
+
+
+# 参考链接
+
+- [https://blog.csdn.net/Ayiayi00/article/details/76907698](https://blog.csdn.net/Ayiayi00/article/details/76907698)
