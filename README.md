@@ -11,6 +11,7 @@
     - [FAQ](#faq)
         - [watch与compute区别](#watch与compute区别)
     - [小结](#小结)
+- [Author](#author)
 
 <!-- /TOC -->
 
@@ -119,4 +120,18 @@ watch： 更多的是「观察」的作用，类似于某些数据的监听回�
 	2. 做过前端或sdk项目，并熟练开发前端功能。如果能开发js-sdk更好，js-sdk对底层逻辑和前后端交互要求非常高。同时要认真研读vue.js源码/原理；熟练使用webrtc/websocket开发。
 
 
+# Author
+
+zhangbiwu
+
+主要技术栈：
+
+* 后端研发
+  * nginx/openresty
+  * C/C++
+  * nodejs
+  * js-sdk
+  * RTM/RTC
+
+- [阿武的博客](https://cherishman2005.github.io/)
 
