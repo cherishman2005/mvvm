@@ -3,6 +3,8 @@
 在使用JS编程中，有时需要在一个方法返回两个个或两个以上的数据，用下面的几种方法都可以实现：
 
 ## 使用数组的方式
+
+【示例】
 ```
 function getData()
 {
@@ -17,7 +19,9 @@ function getNames()
 }
 ```
 
-## 将数据封装在Json中返回
+## 通过json对象返回
+
+【示例1】
 ```
 function getData()
 {
@@ -34,7 +38,7 @@ function getInfo()
 }
 ```
 
-## 通过对象的属性访问方法
+【示例2】
 ```
 function add(a,b) {
   var sum;
