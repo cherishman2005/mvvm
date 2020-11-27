@@ -1,8 +1,9 @@
-
-# cookie too large
+# Cookie Too Large
 
 【问题描述】
 400 bad request
+
+Request Header or Cookie Too Large
 
 ![](/img/cookie-too-large.png)
 
