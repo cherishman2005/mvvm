@@ -58,40 +58,6 @@
       <p class="rsp-text" type="textarea" contenteditable="true" style="width: 80%;height: 46px; text-align:left;">{{SendP2PChatRes}}</p>
     </div>
 
-    <p class="text-unit">A给群组发消息</p>
-    <el-row type="flex" class="row-bg">
-      <el-col :span="24"  style="height: 45px;text-align:left;" >
-        <el-form :inline="true"  size="small">
-          <el-form-item label="reliable">
-            <!--<el-input v-model="SendP2ChannelReq.option.reliable"></el-input>-->
-            <template>
-              <el-select v-model="SendP2ChannelReq.option.reliable" placeholder="reliable">
-                <el-option
-                  v-for="item in reliable"
-                  :key="item.value"
-                  :label="item.label"
-                  :value="item.value">
-                </el-option>
-              </el-select>
-            </template>
-          </el-form-item>
-          <el-form-item label="content">
-            <el-input v-model="SendP2ChannelReq.content"></el-input>
-          </el-form-item>
-          <el-form-item label="channelId">
-            <el-input v-model="SendP2ChannelReq.channelId"></el-input>
-          </el-form-item>
-
-          <el-form-item class="search">
-            <el-button type="primary"  @click="sendMessageToChannel" style="border-radius: 4px">sendMessageToChannel</el-button>
-          </el-form-item>
-        </el-form>
-      </el-col>
-    </el-row>
-    <div class="text">
-      <p class="rsp-text" type="textarea" contenteditable="true" style="width: 80%;height: 46px; text-align:left;">{{SendP2ChannelRes}}</p>
-    </div>
-
     <p class="text-unit">加入Channel</p>
     <el-row type="flex" class="row-bg">
       <el-col :span="24"  style="height: 45px;text-align:left;" >
@@ -124,6 +90,40 @@
     </el-row>
     <div class="text">
       <p class="rsp-text" type="textarea" contenteditable="true" style="width: 80%;height: 46px; text-align:left;">{{LeaveChannelRes}}</p>
+    </div>
+
+    <p class="text-unit">A给群组发消息</p>
+    <el-row type="flex" class="row-bg">
+      <el-col :span="24"  style="height: 45px;text-align:left;" >
+        <el-form :inline="true"  size="small">
+          <el-form-item label="reliable">
+            <!--<el-input v-model="SendP2ChannelReq.option.reliable"></el-input>-->
+            <template>
+              <el-select v-model="SendP2ChannelReq.option.reliable" placeholder="reliable">
+                <el-option
+                  v-for="item in reliable"
+                  :key="item.value"
+                  :label="item.label"
+                  :value="item.value">
+                </el-option>
+              </el-select>
+            </template>
+          </el-form-item>
+          <el-form-item label="content">
+            <el-input v-model="SendP2ChannelReq.content"></el-input>
+          </el-form-item>
+          <el-form-item label="channelId">
+            <el-input v-model="SendP2ChannelReq.channelId"></el-input>
+          </el-form-item>
+
+          <el-form-item class="search">
+            <el-button type="primary"  @click="sendMessageToChannel" style="border-radius: 4px">sendMessageToChannel</el-button>
+          </el-form-item>
+        </el-form>
+      </el-col>
+    </el-row>
+    <div class="text">
+      <p class="rsp-text" type="textarea" contenteditable="true" style="width: 80%;height: 46px; text-align:left;">{{SendP2ChannelRes}}</p>
     </div>
 
     <p class="text-unit">设置用户属性</p>

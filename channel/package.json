@@ -1,7 +1,7 @@
 {
-  "name": "Hummer",
+  "name": "Channel",
   "version": "1.2.2",
-  "description": "Hummer Demo",
+  "description": "Channel Demo",
   "author": "zhangbiwu",
   "private": true,
   "scripts": {
