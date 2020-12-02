@@ -97,7 +97,6 @@
       <el-col :span="24"  style="height: 45px;text-align:left;" >
         <el-form :inline="true"  size="small">
           <el-form-item label="reliable">
-            <!--<el-input v-model="SendP2ChannelReq.option.reliable"></el-input>-->
             <template>
               <el-select v-model="SendP2ChannelReq.option.reliable" placeholder="reliable">
                 <el-option
@@ -117,7 +116,7 @@
           </el-form-item>
 
           <el-form-item class="search">
-            <el-button type="primary"  @click="sendMessageToChannel" style="border-radius: 4px">sendMessageToChannel</el-button>
+            <el-button type="primary" @click="sendMessageToChannel" style="border-radius: 4px">sendMessageToChannel</el-button>
           </el-form-item>
         </el-form>
       </el-col>
@@ -128,7 +127,7 @@
 
     <p class="text-unit">设置用户属性</p>
     <el-row type="flex" class="row-bg">
-      <el-col :span="24"  style="height: 45px;text-align:left;" >
+      <el-col :span="24" style="height:45px; text-align:left;" >
         <el-form :inline="true"  size="small">
           <el-form-item label="channelId">
             <el-input v-model="SetUserAttributesReq.channelId"></el-input>
@@ -140,7 +139,7 @@
             <el-input v-model="SetUserAttributesReq.prop"></el-input>
           </el-form-item>
           <el-form-item class="search">
-            <el-button type="primary"  @click="setUserAttributes" style="border-radius: 4px">setUserAttributes</el-button>
+            <el-button type="primary" @click="setUserAttributes" style="border-radius: 4px">setUserAttributes</el-button>
           </el-form-item>
         </el-form>
       </el-col>
@@ -226,6 +225,7 @@
       <p class="rsp-text" type="textarea" contenteditable="true" style="width: 80%;height: 46px; text-align:left;">{{queryOnlineStatusForUserRes}}</p>
     </div>
     
+    <!--
     <p class="text-unit">批量查询用户数</p>
     <el-row type="flex" class="row-bg">
       <el-col :span="24"  style="height: 45px;text-align:left;" >
@@ -259,6 +259,7 @@
     <div class="text">
       <p class="rsp-text" type="textarea" contenteditable="true" style="width: 80%;height: 46px; text-align:left;">{{batchQueryOnlineStatusForUserRes}}</p>
     </div>
+    -->
 
     <p class="text-unit">清除MQ队列</p>
     <el-row type="flex" class="row-bg">
@@ -354,13 +355,13 @@
         },
         GetGroupUserListByAttributeRes: '',
         queryOnlineStatusForUserReq: {
-          uid: '54321',
+          uid: UID,
         },
         queryOnlineStatusForUserRes: '',
         SendP2PChatReq: {
           option: { reliable: 'no' },
           content: 'js_sdk SendP2PChat',
-          receiver: '54321',
+          receiver: UID,
         },
         SendP2PChatRes: "",
         SendP2ChannelReq: {
@@ -374,7 +375,7 @@
         },
         batchGetChannelUserCountRes: '',
         batchQueryOnlineStatusForUserReq: {
-          uids: '999000'
+          uids: UID
         },
         batchQueryOnlineStatusForUserRes: '',
       }
