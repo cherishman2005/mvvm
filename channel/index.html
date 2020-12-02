@@ -3,8 +3,12 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>Hummer-RTM</title>
-    <script charset="utf-8" src="https://service-test.sunclouds.com/hummer-channel-dev.js"></script>
+    <title>Hummer</title>
+    <script>
+      var now = Math.round(Date.now() / 1000);
+      document.write('<script src="https://service-test.yy.com/hummer-channel-dev.js?t='
+            + now + '"><\/script\>');
+    </script>
   </head>
   <body>
     <div id="app"></div>
