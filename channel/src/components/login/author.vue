@@ -55,7 +55,7 @@
         return {
           uid: '',
           appid: 1504984159,
-          area: 'CN',
+          area: 'china/private/share',
           token: '',
           reportType: 0,
           appids: [{
@@ -66,8 +66,8 @@
               label: '1350626568'
             }],
           areas: [{
-              value: 'CN',
-              label: 'CN'
+              value: 'china/private/share',
+              label: 'china/private/share'
             }, {
               value: 'CN-TEST',
               label: 'shenzhen/test/2'
