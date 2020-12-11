@@ -166,3 +166,23 @@ function hash(text) {
 ## SDK与API的关系
 
 SDK相当于开发集成工具环境，API就是数据接口。在SDK环境下调用API数据。
+
+## 【兼容】回调监听string和object类型判断
+
+```
+let extra = {extra: 'nickname'};
+
+if (typeof(extra) == 'string') {
+  console.log('string');
+} else if (typeof(extra) == 'object') {
+  console.log('object');
+}
+
+let extra1 = 'nickname';
+
+if (typeof(extra1) == 'string') {
+  console.log('string');
+} else if (typeof(extra1) == 'object') {
+  console.log('object');
+}
+```
